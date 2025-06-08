@@ -141,7 +141,7 @@ jobs:
         source build/envsetup.sh
         export ALLOW_MISSING_DEPENDENCIES=true
         # ИСПРАВЛЕНИЕ: lunch теперь использует напрямую созданную переменную
-        lunch ${DEVICE_MAKEFILE}-eng
+        lunch
         make clean
         make ${BUILD_TARGET_COMMAND} -j$(nproc --all)
         echo "Done building your image."
